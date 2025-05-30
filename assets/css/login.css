@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.login-container input[type="submit"] {
+    background-color: #667eea;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #5a67d8;
+}
+
+.login-container p {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+/* === DARK MODE STYLES === */
+body.dark-mode {
+    background: linear-gradient(to right, #1e1e2f, #121220);
+    color: #eee;
+}
+
+body.dark-mode .login-container {
+    background-color: #1f1f2e;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode input,
+body.dark-mode select {
+    background-color: #2c2c3a;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: #5a67d8;
+}
+
+body.dark-mode input[type="submit"]:hover {
+    background-color: #4c51bf;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #eee;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body.dark-mode .theme-toggle {
+    background: #333;
+    color: #eee;
+}
