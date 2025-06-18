@@ -27,59 +27,55 @@ Sebuah sistem pembelajaran daring sederhana berbasis web yang memungkinkan guru 
 
 ## 🗂️ Struktur Folder
 
-/ (root)
-│ dashboard.php
-│ index.php
-│ login.php
-│ logout.php
-│ register.php
-│ profile.php
-│ update_password.php
-│ lms.sql
+```plaintext
+/ (root folder LMS)
 │
-├───assets/
-│ ├───css/
-│ │ ├── login.css
-│ │ ├── students.css
-│ │ └── style.css
-│ └───js/
+│   index.php               -> Halaman utama
+│   login.php               -> Halaman login
+│   logout.php              -> Logout user
+│   register.php            -> Halaman registrasi
+│   profile.php             -> Profil pengguna
+│   update_password.php     -> Ganti password
+│   lms.sql                 -> File backup database
 │
-├───includes/
-│ ├── auth.php
-│ ├── db.php
-│ ├── functions.php
-│ ├── header.php
-│ ├── footer.php
-│ ├── sidebar_guru.php
-│ └── sidebar_siswa.php
+├───assets/                 -> Aset statis (CSS, JS, gambar)
+│   ├───css/
+│   │   ├── login.css
+│   │   ├── students.css
+│   │   └── style.css
+│   └───js/
+│       └── (jika ada JavaScript tambahan)
 │
-├───student/
-│ ├── assignment.php
-│ ├── dashboard.php
-│ ├── grades.php
-│ ├── join_class.php
-│ ├── submit_assignment.php
-│ └── view_material.php
+├───includes/               -> File PHP umum yang digunakan di banyak halaman
+│   ├── auth.php            -> Cek autentikasi login
+│   ├── db.php              -> Koneksi ke database
+│   ├── functions.php       -> Fungsi bantu (helper)
+│   ├── header.php          -> Template header
+│   ├── footer.php          -> Template footer
+│   ├── sidebar_guru.php    -> Sidebar khusus guru
+│   ├── sidebar_siswa.php   -> Sidebar khusus siswa
 │
-├───teacher/
-│ ├── add_announcement.php
-│ ├── add_material.php
-│ ├── create_assignment.php
-│ ├── create_class.php
-│ ├── dashboard.php
-│ └── grade_submissions.php
+├───student/                -> Halaman khusus siswa
+│   ├── dashboard.php       -> Dashboard siswa
+│   ├── join_class.php      -> Form bergabung ke kelas
+│   ├── view_material.php   -> Lihat materi pembelajaran
+│   ├── assignment.php      -> Lihat & kumpul tugas
+│   ├── submit_assignment.php -> Form upload tugas
+│   ├── grades.php          -> Lihat nilai
 │
-└───uploads/
-├───(berbagai file materi, gambar, dan dokumen)
-└───submissions/
-└───(file tugas yang dikumpulkan siswa)
-
-yaml
-Copy
-Edit
-
----
-
+├───teacher/                -> Halaman khusus guru
+│   ├── dashboard.php       -> Dashboard guru (statistik, info tugas, dll.)
+│   ├── create_class.php    -> Buat kelas baru
+│   ├── add_material.php    -> Upload materi ke kelas
+│   ├── create_assignment.php -> Buat tugas baru
+│   ├── grade_submissions.php -> Koreksi dan beri nilai
+│   ├── add_announcement.php -> Tambah pengumuman
+│
+└───uploads/                -> Folder file upload (materi, tugas siswa, dll.)
+    ├───profile_photos/     -> Foto profil pengguna
+    ├───materials/          -> Materi yang diunggah guru
+    └───submissions/        -> Tugas yang dikumpulkan siswa
+```
 ## 🧪 Teknologi yang Digunakan
 
 - PHP Native (tanpa framework)
